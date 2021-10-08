@@ -1,0 +1,14 @@
+[Unit]
+Description=GoBGP Routing Network Inject
+Wants=network.target
+After=gobgpd.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/gobgp/gobgpd-inject.sh
+RemainAfterExit=true
+User=gobgpd
+Group=gobgpd
+
+[Install]
+WantedBy=multi-user.target

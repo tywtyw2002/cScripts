@@ -1,0 +1,8 @@
+[Unit]
+Description=GoBGP Routing Network Inject Timer
+
+[Timer]
+OnActiveSec=30s
+
+[Install]
+WantedBy=timers.target
